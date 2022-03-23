@@ -1,0 +1,13 @@
+<p>Ingresa tu mascota</p>
+
+<br><br>
+<label  for="name-pet">Tipo:</label><br>
+<input #tipo type="text" id="name-pet" placeholder="Perro/Gato">
+<br><br>
+<label for="age-pet">Edad:</label><br>
+<input #edad type="number" id="age-pet" placeholder="Edad" min="0" max="15">
+<br><br>
+<label for="raza-pet">Raza:</label><br>
+<input #raza type="text" id="raza-pet" placeholder="Raza">
+<br><br>
+<button (click)="savePets(tipo.value,edad.value ,raza.value)"> Guardar mascota</button>
