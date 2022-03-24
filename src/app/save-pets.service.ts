@@ -11,7 +11,8 @@ export class SavePetsService {
   mascotas: Array<Pets> = [];
 
   savePets(mascota : Pets):void{
-    this.mascotas.push(mascota);
+    let m : Pets = {tipo:mascota.tipo,edad:mascota.edad,raza:mascota.raza};
+    this.mascotas.push(m);
     console.log(this.mascotas);
   }
 
@@ -19,13 +20,13 @@ export class SavePetsService {
     this.mascotas = [];
   }
 
-  public getStudents(): any {
-    const studentsObservable = new Observable(observer => {
+  public getPets(): any {
+    const PetObservable = new Observable(observer => {
            setTimeout(() => {
                observer.next(this.mascotas);
            }, 1000);
     });
 
-    return studentsObservable;
+    return PetObservable;
 }
 }

@@ -11,14 +11,12 @@ export class CapturePetsComponent implements OnInit {
 
   constructor(private savepetsservice:SavePetsService) { }
 
+  mascota: Pets = {tipo:"",edad:0,raza:""};
+
   ngOnInit(): void {
   }
 
-  
-
-  savePets(name:String,age:String,raza:String):void{
-    const edad = Number(age);
-    const p : Pets  = {tipo:name,edad:edad,raza:raza}
-    this.savepetsservice.savePets(p);
+  savePets():void{
+    this.savepetsservice.savePets(this.mascota);
   }
 }

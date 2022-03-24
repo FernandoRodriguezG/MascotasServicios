@@ -2,12 +2,12 @@
 
 <br><br>
 <label  for="name-pet">Tipo:</label><br>
-<input #tipo type="text" id="name-pet" placeholder="Perro/Gato">
+<input #tipo type="text" id="name-pet"  [(ngModel)]="mascota.tipo" placeholder="Perro/Gato">
 <br><br>
 <label for="age-pet">Edad:</label><br>
-<input #edad type="number" id="age-pet" placeholder="Edad" min="0" max="15">
+<input #edad type="number" id="age-pet" [(ngModel)]="mascota.edad" placeholder="Edad" min="0" max="15">
 <br><br>
 <label for="raza-pet">Raza:</label><br>
-<input #raza type="text" id="raza-pet" placeholder="Raza">
+<input #raza type="text" id="raza-pet" [(ngModel)]="mascota.raza" placeholder="Raza">
 <br><br>
-<button (click)="savePets(tipo.value,edad.value ,raza.value)"> Guardar mascota</button>
+<button (click)="savePets()"> Guardar mascota</button>

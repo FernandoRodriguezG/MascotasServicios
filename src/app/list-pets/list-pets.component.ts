@@ -14,8 +14,8 @@ export class ListPetsComponent implements OnInit {
   pets : Pets[] = [];
 
   ngOnInit(): void {
-    const studentsObservable = this.savepetsservice.getStudents();
-        studentsObservable.subscribe((studentsData: Pets[]) => {
+    const PetObservable = this.savepetsservice.getPets();
+        PetObservable.subscribe((studentsData: Pets[]) => {
             this.pets = studentsData;
         });
   }
